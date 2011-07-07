@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title>System Project Maintanance System - Register Student</title>
+		<link type="text/css" href="../style.css" rel="stylesheet">
+		<script>
+			function validate()
+			{
+				if (document.student.firstname.value.length < 3)
+				{
+					alert("Sorry, first name must be greater than 3 characters !");
+					document.student.firstname.focus();
+					return false;
+				}
+				else if (document.student.middlename.value.length < 3)
+				{
+					alert("Sorry, middle name must be greater than 3 characters !");
+					document.student.middlename.focus();
+					return false;
+				}
+				else if (document.student.lastname.value.length < 3)
+				{
+					alert("Sorry, last name must be greater than 3 characters !");
+					document.student.lastname.focus();
+					return false;
+				}
+				else if (document.student.username.value.length < 4)
+				{
+					alert("Sorry, ID must be greater than 3 digits !");
+					document.student.username.focus();
+					return false;
+				}
+				else if (document.student.password.value.length < 6)
+				{
+					alert("Sorry, password must be greater than 6 characters !");
+					document.student.password.focus();
+					return false;
+				}
+				else if (!document.student.password2.value.match(document.student.password.value))
+				{
+					alert("Sorry, password mismatch !");
+					document.student.password.value = "";
+					document.student.password2.value = "";
+					document.student.password.focus();
+					return false;
+				}
+				else if (!document.student.email.value.match(/^[a-zA-Z0-9]+@[a-z0-9]+.[a-z]+$/))
+				{
+					alert("Sorry, email is invalid !");
+					document.student.email.focus();
+					return false;
+				}
+				else if (!document.student.gpa.value.match(/^[0-9].[0-9][0-9]*+$/))
+				{
+					alert("Sorry, GPA must be like this format: 3.75 !");
+					document.student.email.focus();
+					return false;
+				}
+				else
+					return true;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="menu">
+			<a href="../">Home</a>
+			<span class="separative">|</span>
+			<a href="login.jsp">Login</a>
+		</div>
+
+		<h1>Register student</h1>
+		<div class="registerbox" align="center">
+			<table align="center">
+				<form name="student" method="post" action="register.jsp">
+					<tr>
+						<td>First name</td>
+						<td><input type="text" name="firstname"></td>
+					</tr>
+					<tr>
+						<td>Middle name</td>
+						<td><input type="text" name="middlename"></td>
+					</tr>
+					<tr>
+						<td>Last name</td>
+						<td><input type="text" name="lastname"></td>
+					</tr>
+					<tr>
+						<td>Academic ID</td>
+						<td><input type="text" name="username"></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="password" name="password"></td>
+					</tr>
+					<tr>
+						<td>Password again</td>
+						<td><input type="password" name="password2"></td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><input type="text" name="email"></td>
+					</tr>
+					<tr>
+						<td>GPA</td>
+						<td><input type="text" name="gpa"></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><br><input type="submit" value="Register" onClick="validate()"></td>
+					</tr>
+				</form>
+			</table>
+		</div>	
+	</body>
+</html>

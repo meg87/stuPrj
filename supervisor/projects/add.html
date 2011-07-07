@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>System Project Maintanance System - Add new project</title>
+		<link type="text/css" href="../../style.css" rel="stylesheet">		
+		<script>
+			function validate()
+			{
+				if(document.project.title.value.length < 10)
+				{
+					alert("Sorry, the title must be at lest 10 charachter required !");
+					document.project.title.focus();
+					return false;
+				}
+				if(document.project.description.value.length < 250)
+				{
+					alert("Sorry, the description must be at lest 250 charachter !");
+					document.project.description.focus();
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="menu">
+			<a href="../../">Home</a>
+			<span class="separative">|</span>
+			<a href=".">Projects</a>
+			<span class="separative">|</span>
+			<a href="../visits">Visits</a>
+			<span class="separative">|</span>
+			<a href="../logout.jsp">Logout</a>
+		</div>
+
+		<h1>Add new project</h1>
+		<div class="box">
+			<form name="project" method="post" action="add.jsp">
+				<table>
+					<tr>
+						<td>Title</td>
+						<td><input type="text" name="title" size="95"></td>
+					</tr>
+					<tr>
+						<td>Description</td>
+						<td><textarea name="description" cols="95" rows="10"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><br><input type="submit" value="Add" onClick="validate()"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>

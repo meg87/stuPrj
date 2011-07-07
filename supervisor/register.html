@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>System Project Maintanance System - Register Supervisor</title>
+		<link type="text/css" href="../style.css" rel="stylesheet">
+		<script>
+			function validate()
+			{
+				if (document.supervisor.firstname.value.length < 3)
+				{
+					alert("Sorry, first name must be greater than 3 characters !");
+					document.supervisor.firstname.focus();
+					return false;
+				}
+				else if (document.supervisor.middlename.value.length < 3)
+				{
+					alert("Sorry, middle name must be greater than 3 characters !");
+					document.supervisor.middlename.focus();
+					return false;
+				}
+				else if (document.supervisor.lastname.value.length < 3)
+				{
+					alert("Sorry, last name must be greater than 3 characters !");
+					document.supervisor.lastname.focus();
+					return false;
+				}
+				else if (document.supervisor.username.value.length < 3)
+				{
+					alert("Sorry, username must be greater than 3 characters !");
+					document.supervisor.username.focus();
+					return false;
+				}
+				else if (document.supervisor.password.value.length < 6)
+				{
+					alert("Sorry, password must be greater than 6 characters !");
+					document.supervisor.password.focus();
+					return false;
+				}
+				else if (!document.supervisor.password2.value.match(document.supervisor.password.value))
+				{
+					alert("Sorry, password mismatch !");
+					document.supervisor.password.value = "";
+					document.supervisor.password2.value = "";
+					document.supervisor.password.focus();
+					return false;
+				}
+				else if (!document.supervisor.email.value.match(/^[a-zA-Z0-9]+@[a-z0-9]+.[a-z]+$/))
+				{
+					alert("Sorry, email is invalid !");
+					document.supervisor.email.focus();
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="menu">
+			<a href="../">Home</a>
+			<span class="separative">|</span>
+			<a href="login.jsp">Login</a>
+		</div>
+
+		<h1>Register supervisor</h1>
+		<div class="registerbox" align="center">
+			<table align="center">
+				<form name="supervisor" method="post" action="register.jsp">
+					<tr>
+						<td>First name</td>
+						<td><input type="text" name="firstname"></td>
+					</tr>
+					<tr>
+						<td>Middle name</td>
+						<td><input type="text" name="middlename"></td>
+					</tr>
+					<tr>
+						<td>Last name</td>
+						<td><input type="text" name="lastname"></td>
+					</tr>
+					<tr>
+						<td>Username</td>
+						<td><input type="text" name="username"></td>
+					</tr>
+					<tr>
+						<td>Password</td>
+						<td><input type="password" name="password"></td>
+					</tr>
+					<tr>
+						<td>Password again</td>
+						<td><input type="password" name="password2"></td>
+					</tr>
+					<tr>
+						<td>Email</td>
+						<td><input type="text" name="email"></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center"><br><input type="submit" value="Register" onClick="validate()"></td>
+					</tr>
+				</form>
+			</table>
+		</div>	
+	</body>
+</html>

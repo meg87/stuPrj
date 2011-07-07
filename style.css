@@ -1,0 +1,106 @@
+body{
+	color: #808080;
+}
+h1
+{
+	text-align: center; 
+	margin-top: 100px;
+}
+a
+{
+	color: #bbb;
+}
+a:hover
+{
+	color: #6699FF;
+}
+#footer
+{
+	margin-top: 50px;
+	text-align: center;
+}
+.separative
+{
+	color: #f0f0f0;
+}
+.notice
+{
+	background: #FFF6BF;
+	border: solid 2px #FFD324;
+	padding: 20px;
+	width: 80%;
+	margin: auto;
+	color: #514721;
+	margin-top: 100px;
+}
+.success
+{
+	padding: 20px;
+	width: 80%;
+	margin: auto;
+	margin-top: 100px;
+	background: #E6EFC2;
+	color: #264409;
+	border: 2px solid #C6D880;
+}
+.error
+{
+	padding: 20px;
+	width: 80%;
+	margin: auto;
+	margin-top: 100px;
+	background: #FBE3E4;
+	color: #8A1F11;
+	border: 2px solid #FBC2C4;
+}
+.box
+{
+	background: #F8F8F8 ;
+	border: solid 1px #bbb;
+	margin:auto;
+	padding: 20px;
+	width: 80%;
+	vertical-align:middle;
+}
+.loginbox
+{
+	background: #F8F8F8 ;
+	border: solid 1px #bbb;
+	margin:auto;
+	padding: 20px;
+	width: 250px;
+	vertical-align:middle;
+}
+.registerbox
+{
+	background: #F8F8F8 ;
+	border: solid 1px #bbb;
+	margin:auto;
+	padding: 20px;
+	width: 320px;
+	vertical-align:middle;
+}
+th.tbl, td.tbl
+{
+	padding: 10px;
+	border: 1px #bbb dotted;
+}
+th.tbl
+{
+	background: #f0f0f0;
+}
+tr.tbl:hover
+{
+	background: #FFFFCC;
+}
+table
+{
+	width: 95%;
+}
+.menu
+{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size:small;
+}
